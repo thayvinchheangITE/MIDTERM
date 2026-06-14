@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --h1-font:clamp(30px, 5vw, 80px);
+    --h2-font:clamp(20px, 5vw, 30px);
+    --Tekture:"Tektur";
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-1{
+    flex-direction: row;
+    padding: 0 1vw;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./assets/black-bg.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: "Tektur";
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar ul{
+    display: flex;
+    gap: 5vw;
+    align-self: center;
+    list-style: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: clamp(10px, 3vw, 15px);
+}
+
+.hero{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1{
+    background: linear-gradient(45deg, rgb(244, 1, 90), rgb(127, 0, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: var(--h1-font);
+    font-weight: bold;
+}
+
+.hero p{
+    font-size: clamp(10px, 3vw, 15px);
+}
+
+.hero button{
+    font-size: clamp(8px, 3vw, 15px);
+    font-family: "Tektur";
+    margin-top: 20px;
+    padding: 1vw 4vw;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.hero button a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--Tekture);
+}
+
+.section-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100%;
+    font-family: "Tektur";
+}
+
+.card-container{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.section-2 h2{
+    font-size: var(--h2-font);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(190, 190, 190, 0.36) 0px 1px 3px 0px,
+     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.card i{
+    font-size: clamp(20px, 4vw, 30px);
+}
+
+.card p{
+    font-family: "Barlow Condensed";
+    line-height: 1.6;
+    font-size: clamp(10px, 4vw, 15px);
+}
+
+.section-3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.section-3 h2{
+    font-size: var(--h2-font);
+    justify-self: center;
+    font-family: var(--Tekture);
+}
+
+.brand-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.brand-card{
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brand-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.section-4 h2{
+    font-size: var(--h2-font);
+    text-align: center;
+    font-family: var(--Tekture);
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+    font-family: var(--Tekture);
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-card small{
+    font-family: "Barlow Condensed";
+}
+
+.product-card button{
+    align-self: center;
+    width: 40%;
+    padding: 0.5vw 0;
+    color: white;
+    font-family: var(--Tekture);
+    font-size: clamp(10px, 3vw, 14px);
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.product-card button a{
+    text-decoration: none;
+    color: white;
+}
+
+.product-card button:hover,
+.product-card button:hover a{
+    background-color: white;
+    color: black;
+}
+
+.product-card img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.section-5{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.banner{
+    width: 90%;
+    height: 30vh;
+    background: linear-gradient(45deg, rgb(244, 1, 90) 0%, rgb(127, 0, 255) 100%);
+    margin: 0 auto;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+
+    text-align: center;
+}
+
+.banner h2{
+    font-family: var(--Tekture);
+    font-size: var(--h2-font);
+}
+
+.banner p{
+    font-family: "Barlow Condensed";
+}
+
+.banner button{
+    align-self: center;
+    width: 20%;
+    padding: 0.5vw 0;
+    color: white;
+    font-size: clamp(5px, 3vw, 14px);
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: "Barlow Condensed";
+}
+
+.banner button a{
+    text-decoration: none;
+    color: white;
+}
+
+.banner button:hover a,
+.banner button:hover{
+    background-color: white;
+    color: black;
+}
+
+.section-6{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 95%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Barlow Condensed";
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.047);
+    transition: 0.1s ease-in;
+}
+
+.footer-column:hover{
+    background-color: rgba(255, 255, 255, 0.167);
+}
+
+.footer-column h1{
+    align-self: baseline;
+    font-family: var(--Tekture);
+}
+
+.footer-column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-column ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column ul li a:hover{
+    color: blueviolet;
+}
+
+.subscribe-form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.subscribe-form input{
+    height: 30px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.167);
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: "Barlow Condensed";
+    border-left: 2px solid rgb(220, 0, 198);
+}
+
+.subscribe-form button{
+    background-color: rgb(220, 0, 198);
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Barlow Condensed";
+}
+
+.footer-bottom{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-top: 1px solid gray;
+    padding: 20px 0;
+    font-family: "Barlow Condensed";
+}
+
+@media(max-width:900px){
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+}
+
+@media(max-width:758px){
+    .footer-bottom{
+        flex-direction: column;
+    }
+
+    .hero button{
+        border: 1px solid white;
+    }
+
+    .product-card button{
+        height: 30px;
+    }
+
+    .brand-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    .card-container{
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+    }
+}
+
+
+@media(max-width:400px){
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media(max-width:470px){
+    .brand-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+    .card-container{
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+    }
+
+    .product-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --h1-font: clamp(30px, 5vw, 80px);
+    --h2-font: clamp(20px, 5vw, 30px);
+    --Tekture: "Tektur";
+}
+
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--Tekture);
+    padding: 0 1vw;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 5vw;
+    align-self: center;
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(10px, 3vw, 15px);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.contact-container span {
+    font-family: "Barlow Condensed", sans-serif;
+    color: aqua;
+    letter-spacing: 1px;
+}
+
+.contact-container h2 {
+    font-family: var(--Tekture);
+    font-size: clamp(20px, 5vw, 50px);
+    background: linear-gradient(90deg, rgb(244, 1, 90) 0%, aqua 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-container p {
+    font-family: "Barlow Condensed";
+    text-align: center;
+    max-width: 650px;
+    color: rgba(128, 128, 128, 0.893);
+    line-height: 1.5;
+}
+
+.contact-content {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 60px;
+    gap: 5vw;
+    align-items: flex-start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    flex: 0 0 280px;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-family: var(--Tekture);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.contact-info ul li {
+    font-family: "Barlow Condensed";
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: rgba(112, 128, 135, 0.532);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.05rem;
+    outline: none;
+}
+
+.form-group input {
+    height: 40px;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: aqua;
+}
+
+.submit-btn {
+    font-family: var(--Tekture);
+    background: linear-gradient(90deg, rgb(244, 1, 90) 0%, aqua 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.footer-section{
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 95%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Barlow Condensed";
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.047);
+    transition: 0.1s ease-in;
+}
+
+.footer-column:hover{
+    background-color: rgba(255, 255, 255, 0.167);
+}
+
+.footer-column h1{
+    align-self: baseline;
+    font-family: var(--Tekture);
+}
+
+.footer-column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-column ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column ul li a:hover{
+    color: blueviolet;
+}
+
+.subscribe-form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.subscribe-form input{
+    height: 30px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.167);
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: "Barlow Condensed";
+    border-left: 2px solid rgb(220, 0, 198);
+}
+
+.subscribe-form button{
+    background-color: rgb(220, 0, 198);
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Barlow Condensed";
+}
+
+.footer-bottom{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-top: 1px solid gray;
+    padding: 20px 0;
+    font-family: "Barlow Condensed";
+}
+
+
+@media(max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact-info {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .contact-text{
+        width: 100%;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:450px){
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
